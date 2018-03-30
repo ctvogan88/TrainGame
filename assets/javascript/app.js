@@ -1,4 +1,3 @@
-
 // initializa firebase
 var config = {
     apiKey: "AIzaSyBqFHEm34QKHfDy0PC6ne_22UafIpKEF2c",
@@ -13,14 +12,43 @@ firebase.initializeApp(config);
 // set a variable for the database object
 var database = firebase.database();
 
-console.log("DB: " + database);
-
-var name = "clayton";
+// define global variables for user input
+var name = "";
 var destination = "";
 var initialTime = 0;
 var frequency = 5;
 var nextTime = 0;
 var deltaTime = 0;
+
+// asks the user if they want CCR background music
+var audio = new Audio("assets/audio/ccr-midnightspecial.mp3");
+
+var doIt = confirm('Do you like train music?!');
+
+if (doIt) {
+
+    audio.play();
+
+    var isPlaying = true;
+
+    $(document).ready(function () {
+        $("#stop").on("click", function () {
+            if (isPlaying) {
+                // Stop 
+                isPlaying = false;
+                audio.pause();
+                $(this).text("PLAY!");
+            } else {
+                // Play
+                isPlaying = true;
+                audio.play();
+                $(this).text("STOP!")
+
+            };
+        });
+    });
+
+};
 
 // initiates the fxn on click of button id submit
 $("#submit").on("click", function (event) {
