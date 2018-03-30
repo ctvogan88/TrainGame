@@ -37,12 +37,12 @@ if (doIt) {
                 // Stop 
                 isPlaying = false;
                 audio.pause();
-                $(this).text("PLAY!");
+                $(this).text("Play CCR!");
             } else {
                 // Play
                 isPlaying = true;
                 audio.play();
-                $(this).text("STOP!")
+                $(this).text("Pause CCR!")
 
             };
         });
