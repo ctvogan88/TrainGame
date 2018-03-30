@@ -119,7 +119,7 @@ var createRow = function (data) {
         // Next Train
         console.log(firstTime + " ----- " + newTime);
 
-        if (firstTime < newTime) {
+        if (firstTime > newTime) {
         var nextArr = moment().add(delta, "minutes");
         console.log("ARRIVAL TIME: " + moment(nextArr).format("hh:mm"));
         } else {var nextArr = "Train has not begun service yet!"};
