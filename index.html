@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/util-function.js"></script>
+    <script type="text/javascript" src="assets/javascript/clear-default-text.js"></script>
 </head>
 
 <body>
@@ -24,30 +26,33 @@
             </div>
 
             <div class="row">
+                <div class="col-md-6" id="view-train"></div>
                 <div class="col-md-6" id="add-train">
                     <div class="panel panel-primary form">
                         <div class="panel-heading">
-                            <h3 class="panel-title">Add Train to the Schedule</h3>
+                            <h3 class="panel-title">Add a Train to the Schedule</h3>
                         </div>
                         <div class="panel-body">
-                            
-                            <div class="input-group">
-                                    <label for="train-name">Train Name:</label><input type="text" class="form-control" id="train-name" default="Train Name">
-                            </div>
-                            <label for="destination">Destination</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="destination">
-                            </div>
-                            <label for="initial-time">Initial Departure Time (HH:MM)</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="initial-time">
-                            </div>
-                            <label for="frequency">Frequency</label>
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="frequency">
-                            </div>
-                            <br>
-                            <button type="button" class="btn btn-primary" id="submit">Submit</button>
+                            <form id="contact" method="post" action="">
+                                <fieldset>
+                                    <div class="input-group">
+                                        <!-- tried to make it so the fields would hide the default when cursor placed -->
+                                        <input type="text" class="form-control" id="train-name" value="Name the Train">
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="destination" value="Where's the Train Going?">
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="initial-time" value="What's the Initial Departure Time? HH:MM">
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="frequency" value="How often does it arrive?">
+                                    </div>
+                                    <br>
+                                    <button type="reset" class="btn btn-primary" id="reset">Reset</button>
+                                    <button type="button" class="btn btn-primary" id="submit">Submit</button>
+                                </fieldset>
+                            </form>
                         </div>
                     </div>
                 </div>
