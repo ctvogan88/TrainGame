@@ -1,0 +1,17 @@
+#add-train {
+    float:right;
+
+}
+
+.form-control {
+    width: 50%;
+}
+
+.input-group {
+    width: 100%;
+}
+.header{
+    text-align: center;
+    background-image: url("https://i3.wp.com/www.railpictures.net/images/d2/2/7/8/3278.1438313367.jpg");
+    color: white;
+}

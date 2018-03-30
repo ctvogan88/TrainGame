@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Train Game</title>
+    <!--skullicon-->
+    <link href="assets/images/skull.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="panel panel-default header">
+            <div class="panel-body">
+                <h1>It's the Train Game</h1>
+                <h4>View or Add a Train to the Schedule</h4>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6" id="add-train">
+                    <div class="panel panel-primary form">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Add Train to the Schedule</h3>
+                        </div>
+                        <div class="panel-body">
+                            
+                            <div class="input-group">
+                                    <label for="train-name">Train Name:</label><input type="text" class="form-control" id="train-name" default="Train Name">
+                            </div>
+                            <label for="destination">Destination</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="destination">
+                            </div>
+                            <label for="initial-time">Initial Departure Time (HH:MM)</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="initial-time">
+                            </div>
+                            <label for="frequency">Frequency</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="frequency">
+                            </div>
+                            <br>
+                            <button type="button" class="btn btn-primary" id="submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Real Time Train Schedule</h3>
+            </div>
+            <div class="panel-body">
+                <table class="table" id="employee-data">
+                    <thead>
+                        <tr>
+                            <th>Train Name</th>
+                            <th>Destination</th>
+                            <th>Initial Departure Time</th>
+                            <th>Frequency</th>
+                            <th>Next Arrival</th>
+                            <th>Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                            <td><span id="emp-name"></span></td>
+                            <td><span id="emp-role"></span></td>
+                            <td><span id="date-start"></span></td>
+                            <td><span id="months-worked"></span></td>
+                            <td><span id="rate-monthly"></span></td>
+                            <td><span id="total-billed"></span></td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+<script src="https://momentjs.com/downloads/moment.min.js"></script>
+<script src="assets/javascript/app.js"></script>
+
+</html>
